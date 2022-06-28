@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="menu">
+    <a href="index.html">HOME</a>
+    <a href="index.html#learn">LEARN</a>
+    <a href="index.html#about_us">ABOUT US</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="download.html">DOWNLOAD</a>
+    <a href="#">PROFILE</a>
+</section>
+<section id="profileImage">
+    <div class="mainCenter">
+        <h1 id="title"></h1>
+        <p id="slogan">THIS IS YOUR PERSONAL TAB WHERE YOU WILL SEE ALL YOUR INFO.</p>
+    </div>
+</section>
+<section id="learn">
+    <h2 id="learn_title">THIS IS YOUR&nbsp<u id="recycle">RECYCLE SCORE</u></h2>
+    <p id="learn_slogan"></p>
+    <div id="learn_tabs">
+        <div class="columns">
+            <ul class="waste">
+                <li class="header" id="tableheader"></li>
+                <li id="score"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="learn_more">
+        <button onclick="window.location.href='spend.html'" id="learn_more_button">SPEND POINTS</button>
+    </div>
+</section>
+
+<section>
+    <div id="socials">
+        <br>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright © 2021 Team 2 TIA - Waste Management. All Rights Reserved.</p>
+</footer>
+
+<script>
+    let text = "WELCOME" + " " + sessionStorage.getItem("name").toUpperCase();
+    document.getElementById("title").innerHTML = text;
+
+    let name = sessionStorage.getItem("name").toUpperCase() + " " + sessionStorage.getItem("lastname").toUpperCase();
+    document.getElementById("tableheader").innerHTML = name;
+
+    document.getElementById("score").innerHTML = Math.floor(Math.random() * 20000) + 1;
+</script>
+</body>
+</html>
